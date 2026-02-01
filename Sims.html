@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Proposal</title>
+
+  <style>
+    body {
+      background: #ffe3ec;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Georgia, serif;
+      margin: 0;
+      color: #333;
+    }
+
+    .container {
+      background: #fff0f5;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 450px;
+    }
+
+    h1 {
+      color: #c71585;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    p {
+      margin-top: 14px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .question {
+      margin-top: 26px;
+      font-size: 19px;
+      font-weight: 500;
+      color: #b30059;
+    }
+
+    button {
+      margin: 14px;
+      padding: 10px 26px;
+      font-size: 16px;
+      border-radius: 24px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background: #d63384;
+      color: white;
+    }
+
+    #noBtn {
+      background: #ccc;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>To Someone Special</h1>
+
+    <p>
+      I’ve never believed in rushing feelings.  
+      I believe in moments that slowly start to matter.
+    </p>
+
+    <p>
+      Somewhere between conversations, silences,  
+      and small smiles — you became important to me.
+    </p>
+
+    <p>
+      I don’t promise perfection,  
+      just honesty, effort, and care.
+    </p>
+
+    <p class="question">
+      Would you like to be my Valentine?
+    </p>
+
+    <button id="yesBtn" onclick="yesClicked()">Yes</button>
+    <button id="noBtn" onmouseover="moveNo()">No</button>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          flex-direction:column;
+          background:#ffe3ec;
+          font-family:Georgia;
+          text-align:center;
+          padding:40px;">
+
+          <h1 style="color:#c71585;">Thank you 🤍</h1>
+
+          <p style="font-size:18px; max-width:420px;">
+            I don’t know what the future holds,  
+            but choosing you feels like a beautiful beginning.
+          </p>
+
+          <p style="margin-top:20px; color:#b30059;">
+            Happy Valentine’s Day  
+          </p>
+
+          <p style="margin-top:10px;">— Simran</p>
+        </div>
+      `;
+    }
+
+    function moveNo() {
+      const btn = document.getElementById("noBtn");
+      btn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+      btn.style.top = Math.random() * (window.innerHeight - 60) + "px";
+    }
+  </script>
+</body>
+</html>
